@@ -1,5 +1,5 @@
 # SBBP-orbit-code
-Code for the paper 《Realization of Autonomous Antenna Tracking for Low Earth Orbit Satellites》
+Code for the paper "Realization of Autonomous Antenna Tracking for Low Earth Orbit Satellites"
 This repository will contain the source code of the paper:
 "Realization of Autonomous Antenna Tracking for Low Earth Orbit Satellites"
 
