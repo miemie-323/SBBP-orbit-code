@@ -5,9 +5,9 @@ from skyfield.api import EarthSatellite, load
 from skyfield.iokit import parse_tle_file
 from datetime import datetime, timedelta
 import math
-import pandas as pd  # 引入 pandas 用于读取 Excel 文件
+import pandas as pd  
 from sko.GA import GA
-import time  # 添加时间模块
+import time  
 
 
 def is_nan(num):
@@ -19,7 +19,7 @@ excel_data_next = pd.read_excel('4338-1108-stkcompute.xlsx', header=None)
 ts = load.timescale()
 bluffton = wgs84.latlon(32.061667, 118.777778)
 
-start_time = datetime.strptime("2024-11-08 10:01:00", "%Y-%m-%d %H:%M:%S")  # 设定起始时间
+start_time = datetime.strptime("2024-11-08 10:01:00", "%Y-%m-%d %H:%M:%S") 
 end_time = start_time + timedelta(minutes=10)
 time_step = timedelta(milliseconds=1000)
 
@@ -96,7 +96,7 @@ def error_analyze(bstar):
                          f"{currentms_time.day:02d} "
                          f"{(currentms_time.hour + 8):02d}:"
                          f"{currentms_time.minute:02d}:"
-                         f"{currentms_time.second + currentms_time.microsecond / 1_000_000:06.3f}") #将 currentms_time 格式化为字符串，便于存储和后续使用。
+                         f"{currentms_time.second + currentms_time.microsecond / 1_000_000:06.3f}")
             list = [strmsTime]
 
             for i in range(0, len(listID), 3):
@@ -133,8 +133,8 @@ def error_analyze(bstar):
 
             row_index += 1
 
-    total_error = az_degrees_error + alt_degrees_error   #当前时刻的总误差，方位角误差和俯仰角误差相加。
-    total_error_next = az_degrees_error_next + alt_degrees_error_next #下一个时刻的总误差，将下一个时刻的方位角误差和俯仰角误差相加。
+    total_error = az_degrees_error + alt_degrees_error   
+    total_error_next = az_degrees_error_next + alt_degrees_error_next 
     # print(az_degrees_error)
     # print(alt_degrees_error)
     print(az_degrees_error_next)
@@ -159,3 +159,4 @@ def error_analyze(bstar):
 
 error_analyze([14167])
 #error_analyze([15818])
+
