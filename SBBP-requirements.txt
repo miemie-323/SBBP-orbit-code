@@ -1,0 +1,9 @@
+numpy
+scipy
+matplotlib
+pandas
+skyfield>=1.46
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-opt>=0.6.5
+openpyxl>=3.0.0  # 用于读取Excel文件
